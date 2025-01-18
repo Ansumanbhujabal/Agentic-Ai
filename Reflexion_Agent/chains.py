@@ -1,4 +1,5 @@
 from langchain_core.output_parsers.openai_tools import JsonOutputToolsParser, PydanticToolsParser
+# from langchain_core.output_parsers import JsonOutputToolsParser,PydanticOutputParser,PydanticToolsParser
 from langchain_core.messages import BaseMessage, HumanMessage
 from langgraph.graph import END, MessageGraph
 from typing import Sequence, List
@@ -11,7 +12,8 @@ import os
 import dotenv
 dotenv.load_dotenv()  
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-llm = ChatGroq(model="llama3-8b-8192")
+llm = ChatGroq(model="llama-3.1-8b-instant")
+
 ## Making actor primpt template
 
 
@@ -33,10 +35,6 @@ Current time: {time}
 ).partial(
     time=lambda: datetime.datetime.now().isoformat(),
 )
-
-
-
-
 
 parser=JsonOutputToolsParser(return_id=True)
 parser_pydantic=PydanticToolsParser(tools=[AnswerQuestion])
@@ -70,6 +68,7 @@ if __name__=="__main__":
         content="Write About Kamikaze planes and nuclear submarines,"
   
     )
-    chain=(first_resopnder_template|llm.bind_tools(tools=[AnswerQuestion],tool_choice="AnswerQuestion")|parser_pydantic)
+    # chain=(first_resopnder_template|llm.bind_tools(tools=[AnswerQuestion],tool_choice="AnswerQuestion")|parser_pydantic)
+    chain=(first_resopnder|parser_pydantic)
     res=chain.invoke(input={"messages":[human_message]})
     print(res)
