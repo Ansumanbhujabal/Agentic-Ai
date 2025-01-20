@@ -10,7 +10,6 @@ import dotenv
 dotenv.load_dotenv()  
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 print("The api key is-------------------------->>>>>>>>>>>>>>>>>>")
-print(GROQ_API_KEY)
 ## Initialize Llama
 # llm = ChatGroq(model="llama3-8b-8192",api_key=GROQ_API_KEY)
 llm=LLM(model="groq/llama3-8b-8192",api_key=GROQ_API_KEY)
