@@ -139,9 +139,9 @@ inputs = {
     "customer": "PMEC,Berhampur",
     "person": "Ansuman Bhujabala",
     "inquiry": "I need help with making my students aware"
-               "about study abroad opportunities , specifically "
-               "how and which eaxm they should appear and which of your service they can use  "
-               "Can you provide guidance?"
+               " about study abroad opportunities , specifically "
+               " how and which eaxm they should appear and which of your service they can use  "
+               " Can you provide guidance?"
 }
 result = crew.kickoff(inputs=inputs)
 
