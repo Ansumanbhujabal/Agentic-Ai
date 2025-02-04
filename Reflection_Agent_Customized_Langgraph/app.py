@@ -3,6 +3,7 @@
 
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_groq import ChatGroq
+from langchain_core.output_parsers.string import StrOutputParser
 from langchain_core.utils.function_calling import convert_to_openai_function
 from langchain_core.messages import BaseMessage,HumanMessage,FunctionMessage
 from langgraph.prebuilt import ToolInvocation,ToolExecutor
