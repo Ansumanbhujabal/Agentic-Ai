@@ -16,7 +16,7 @@ logging.basicConfig(
 with open("Career_Names_endpoints.json", "r") as f:
     careers_data = json.load(f)
 
-API_URL = "https://devie4nodeapis.azurewebsites.net/api/careerLibrary/career"
+API_URL = "replace_ur_url"
 HEADERS = {
     "accept": "*/*",
     "Authorization": "APIKEY-STRFQUJDRDEyMw=="  
