@@ -12,10 +12,10 @@ import os
 import dotenv
 dotenv.load_dotenv()  
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-TAVILY_API_KEY=os.getenv("TAVILY_API_KEY")
-
+SERPER_API_KEY=os.getenv("SERPER_API_KEY")
 
 print("The api key is-------------------------->>>>>>>>>>>>>>>>>>")
+print(GROQ_API_KEY)
 ## suggested models
 
 # deepseek-r1-distill-llama-70b
@@ -69,7 +69,7 @@ top_colleges_reviewer_agent = Agent(role=
                           backstory=
                           """
                           You are a Senior Content Validator and fact checker  who has been assigned to validate the task 
-                          for the {career_name} field if {top_colleges} are correct or not.
+                          for the {career_name} field if {top_colleges}   are correct or not.
                           """,
                           llm=llm,
                           # tools = [Google_search_tool],
@@ -81,7 +81,7 @@ top_exams_reviewer_agent = Agent(role=
                           backstory=
                           """
                           You are a Senior Content Validator and fact checker  who has been assigned to validate the task 
-                          for the {career_name} field if {top_exams} are correct or not.
+                          for the {career_name} field if {top_exams}  are correct or not.
                           """,
                           llm=llm,
                           # tools = [Google_search_tool],
@@ -94,10 +94,13 @@ famous_personality_reviewer_agent = Agent(role=
                           backstory=
                           """
                           You are a Senior Content Validator and fact checker  who has been assigned to validate the task 
-                          for the {career_name} field if {famous_personalities_name} are correct or not.
+                          for the {career_name} field if {famous_personalities_name}   are correct or not.
+                          The tools you have access accept strings as input parameter only.
                           """,
                           llm=llm,
-                          tools = [Google_search_tool],
+                          # tools = [Google_search_tool],
+                          tools = [duck_search],
+
                           verbose=True)
 
 
@@ -107,7 +110,7 @@ top_companies_reviewer_agent = Agent(role=
                           backstory=
                           """
                           You are a Senior Content Validator and fact checker  who has been assigned to validate the task 
-                          for the {career_name} field if {top_companies}  are correct companies or not.
+                          for the {career_name} field if {top_companies}   are correct companies or not.
                           The tools you have access accept strings as input parameter only.
                           """,
                           llm=llm,
@@ -141,29 +144,32 @@ description_reviewer_task = Task(description=
                           1. The description is facutally correct.
                           2. The description matches with the field.
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
+                                            One liner reason only for the  label "WRONG" """,
                         agent=description_reviewer_agent)
 
 top_colleges_reviewer_task = Task(description=
                         """
                           Your task is to validate and fact-check .             
-                          for the {career_name} field if {top_colleges} are correct and suggested Colleges  or not.
+                          for the {career_name} field if {top_colleges}  are correct and suggested Colleges  or not.
                           on the ground of 
                           1. The suggested colleges are top colleges for that field.
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied
+                                            One liner reason only for the  label "WRONG" """,
                         agent=top_colleges_reviewer_agent)
 
 
 top_exams_reviewer_task = Task(description=
                         """
                           Your task is to validate and fact-check .             
-                          for the {career_name} field if {top_exams} are correct and suggested exams  or not to study in that field.
+                          for the {career_name} field if {top_exams}  are correct and suggested exams  or not to study in that field.
                           on the ground of 
                           1. The exams are not outdated and still conducted.
                           2. The exams are famous and a significant number of students appear it in India.
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
+                                            One liner reason only for the  label "WRONG" """,
                         agent=top_exams_reviewer_agent)
 
 
@@ -171,7 +177,7 @@ top_exams_reviewer_task = Task(description=
 famous_personality_reviewer_task = Task(description=
                         """
                           Your task is to validate and fact-check .             
-                          for the {career_name} field if {famous_personalities_name} are correct famous personality name or not.
+                          for the {career_name} field if {famous_personalities_name}  are correct famous personality name or not.
                           on the ground of 
                           1. The persons have workied in the {career_name} field directly in the real work.
                           2. THey must predominantly known for this specific {career_name} field , not nay other.
@@ -179,19 +185,21 @@ famous_personality_reviewer_task = Task(description=
                           4. They are not involved in Criminal offences.
                           5. They are not  passive contributors like investors,industrialists, activists. 
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
+                                            One liner reason only for the  label "WRONG" """,
                         agent=famous_personality_reviewer_agent)
 
 
 top_companies_reviewer_task = Task(description=
                         """
                           Your task is to validate and fact-check .             
-                          for the {career_name} field if {top_companies} are correct and suggested companies or not .
+                          for the {career_name} field if {top_companies}  are correct and suggested companies or not .
                           on the ground of 
                           1. The companies work directly in the field.
                           2. They have a reputation of working and employing people in that field.
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
+                                            One liner reason only for the  label "WRONG" """,
                         agent=top_companies_reviewer_agent)
 
 
@@ -201,29 +209,36 @@ master_task = Task(description=
                                You need to make sure the following grounds
                                1. Even a single "WRONG" label is given to the data from any subordinate , return will be "REJECTED".
                                2. If all labels given are only "RIGHT" , return will be "ACCEPTED"
+                               3. If you are returning "REJECTED" then also add it's reason from the agent.
                             """,
-                          expected_output=""" Return your deciscions in a single word only "ACCEPTED" or "REJECTED" """ ,
+                          expected_output=""" 
+                          Status: Return your deciscions in a single word only "ACCEPTED" or "REJECTED"
+                          Reason: If the status is "REJECTED", state  the reason  """ ,
                           agent=master_agent)
 
 
 ## Initializing the Crew
 
-crew = Crew(agents=[ description_reviewer_agent,top_colleges_reviewer_agent,top_exams_reviewer_agent,famous_personality_reviewer_agent,top_companies_reviewer_agent,master_agent], 
-            tasks=[description_reviewer_task,top_colleges_reviewer_task,top_exams_reviewer_task,famous_personality_reviewer_task,top_companies_reviewer_task,master_task], 
-            verbose=True)
+crew = Crew(agents=[ description_reviewer_agent,top_colleges_reviewer_agent,famous_personality_reviewer_agent,top_companies_reviewer_agent,master_agent], 
+            tasks=[description_reviewer_task,top_colleges_reviewer_task,famous_personality_reviewer_task,top_companies_reviewer_task,master_task], 
+           verbose=True)
 
 
-inputs = {
-"Career Cluster": "Agriculture, Food & Natural Resources",
-"career_name": "Civil Engineer, Irrigation",
-"description": "An Irrigation Engineer, a specialized Civil Engineer, designs and supervises the construction of irrigation projects to transport water to agricultural lands. They assess water needs, soil conditions, and topography to develop effective irrigation systems. They also ensure the optimal use of water resources and maintain the sustainability of water supplies.",
-"top_colleges": "Indian Institute of Technology (IIT) Bombay \nIndian Institute of Technology (IIT) Delhi \nIndian Institute of Technology (IIT) Madras \nBirla Institute of Technology and Science (BITS) Pilani \nNational Institute of Technology (NIT) Trichy",
-"top_exams": "Joint Entrance Examination (JEE) Advanced \nBirla Institute of Technology and Science Admission Test (BITSAT) \nVellore Institute of Technology Engineering Entrance Exam (VITEEE) \nSRM Joint Engineering Entrance Exam (SRMJEEE) \nManipal Entrance Test (MET) \nGraduate Aptitude Test in Engineering (GATE) \nTamil Nadu Common Entrance Test (TANCET) \nMaharashtra Common Entrance Test (MAH-CET)",
-"famous_personalities_name": "Dr. Mihir Shah \nRajendra Singh \nAnupam Mishra \nAyyappa Masagi  \nAbdul Kalam",
-"top_companies": "Jain Irrigation Systems \nNetafim Irrigation India \nPremier Irrigation Adritec \nEPC Industrie \nKSB Pumps",                           
-}
-result = crew.kickoff(inputs=inputs)
+# inputs={
+#   "career_id": "116",
+#   "career_name": "Architect",
+#   "description": "An Architect is responsible for designing, planning, and overseeing the construction of buildings, homes, and other structures. They work in various sectors, including residential, commercial, and public works. Architects must have a strong understanding of design principles, construction methods, and zoning regulations. They also need to consider aesthetic appeal, functionality, and sustainability when creating designs.",
+#   "top_colleges": "School of Planning and Architecture  Delhi,, Indian Institute of Technology (IIT), Kharagpur, National Institute of Technology (NIT), Tiruchirappalli, Jadavpur University, Kolkata, Indian Institute of Technology (IIT), Roorkee",
+#   "famous_personalities_name": "B.V. Doshi, Charles Correa, Raj Rewal, Hafeez Contractor",
+#   "top_companies": "Hafeez Contractor, Morphogenesis, C.P. Kukreja Associates, Shashi Prabhu & Associates, Raja Aederi Consultants"
+# }
+# result = crew.kickoff(inputs=inputs)
 
 
-# final output
-print(result.raw)          
+# # final output
+# # print(result.raw)          
+# final_result={
+# "id":inputs["career_id"],
+# "status":result.raw      
+# }
+# print(f"The result is {final_result}")
