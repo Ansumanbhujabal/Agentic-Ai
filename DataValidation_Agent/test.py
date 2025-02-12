@@ -97,7 +97,7 @@ top_companies_reviewer_agent = Agent(role=
                           for the {career_name} field if {top_companies}  are correct companies or not.
                           """,
                           llm=llm,
-                          tools = [Tavily_search_tool],
+                          # tools = [Tavily_search_tool],  ## won't use tavily 
                           verbose=True)
 
 
