@@ -19,7 +19,6 @@ with open("Career_Names_endpoints.json", "r") as f:
 API_URL = "replace_ur_url"
 HEADERS = {
     "accept": "*/*",
-    "Authorization": "APIKEY-STRFQUJDRDEyMw=="  
 }
 
 final_results = []
