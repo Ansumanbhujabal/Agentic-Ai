@@ -15,7 +15,6 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 SERPER_API_KEY=os.getenv("SERPER_API_KEY")
 
 print("The api key is-------------------------->>>>>>>>>>>>>>>>>>")
-print(GROQ_API_KEY)
 ## suggested models
 
 # deepseek-r1-distill-llama-70b
@@ -25,30 +24,24 @@ print(GROQ_API_KEY)
 # llm = ChatGroq(model="groq/llama3-8b-8192",api_key=GROQ_API_KEY)
 llm=LLM(model="groq/llama-3.3-70b-versatile",api_key=GROQ_API_KEY)  ## This model works best 
 
+# llm=LLM(model="groq/llama-3.1-8b-instant",api_key=GROQ_API_KEY)
 ##  Defining all the Tools
 
 
 @tool('DuckDuckGoSearch')
 def duck_search(search_query: str):
-    """Search the web for information on a given topic"""
-    return DuckDuckGoSearchRun().run(search_query)
+    """Search the web for information on a given topic, The input parameter should be a string"""
+    answer=DuckDuckGoSearchRun().run(search_query)
+    print(f"The answer is {answer}")
+    return answer
+    
+# duck_search=DuckDuckGoSearchRun()
 
-
-scrape_tool = EXASearchTool()
 # search = GoogleSerperAPIWrapper()
 @tool("GoogleSearchTool")
 def Google_search_tool(search_query: str):
     """Performs a search using the GoogleSearchTool."""
     return GoogleSerperAPIWrapper().run(search_query)
-web_search_tool = TavilySearchResults(k=3)    
-@tool("Tavilysearchtool")
-def Tavily_search_tool(search_query: str):
-    """Performs a search using the Tavily search tool."""
-    return web_search_tool().run(search_query)
-# tavily_search_tool=Tavily_search_tool()
-
-
-
 ## Defining Agents
 
 description_reviewer_agent = Agent(role=
@@ -75,19 +68,7 @@ top_colleges_reviewer_agent = Agent(role=
                           # tools = [Google_search_tool],
                           verbose=True)                       
 
-top_exams_reviewer_agent = Agent(role=
-                          "Senior Content Validator and fact checker",
-                          goal="Validate the content with facts and get the most correct content", 
-                          backstory=
-                          """
-                          You are a Senior Content Validator and fact checker  who has been assigned to validate the task 
-                          for the {career_name} field if {top_exams}  are correct or not.
-                          """,
-                          llm=llm,
-                          # tools = [Google_search_tool],
-                          verbose=True)                       
-
-
+                  
 famous_personality_reviewer_agent = Agent(role=
                           "Senior Content Validator and fact checker",
                           goal="Validate the content with facts and get the most correct content", 
@@ -99,8 +80,7 @@ famous_personality_reviewer_agent = Agent(role=
                           """,
                           llm=llm,
                           # tools = [Google_search_tool],
-                          tools = [duck_search],
-
+                          tools = [duck_search],                                      
                           verbose=True)
 
 
@@ -144,8 +124,7 @@ description_reviewer_task = Task(description=
                           1. The description is facutally correct.
                           2. The description matches with the field.
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
-                                            One liner reason only for the  label "WRONG" """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied """,
                         agent=description_reviewer_agent)
 
 top_colleges_reviewer_task = Task(description=
@@ -155,24 +134,8 @@ top_colleges_reviewer_task = Task(description=
                           on the ground of 
                           1. The suggested colleges are top colleges for that field.
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied
-                                            One liner reason only for the  label "WRONG" """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied """,
                         agent=top_colleges_reviewer_agent)
-
-
-top_exams_reviewer_task = Task(description=
-                        """
-                          Your task is to validate and fact-check .             
-                          for the {career_name} field if {top_exams}  are correct and suggested exams  or not to study in that field.
-                          on the ground of 
-                          1. The exams are not outdated and still conducted.
-                          2. The exams are famous and a significant number of students appear it in India.
-                        """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
-                                            One liner reason only for the  label "WRONG" """,
-                        agent=top_exams_reviewer_agent)
-
-
 
 famous_personality_reviewer_task = Task(description=
                         """
@@ -180,15 +143,14 @@ famous_personality_reviewer_task = Task(description=
                           for the {career_name} field if {famous_personalities_name}  are correct famous personality name or not.
                           on the ground of 
                           1. The persons have workied in the {career_name} field directly in the real work.
-                          2. THey must predominantly known for this specific {career_name} field , not nay other.
+                          2. THey must predominantly known for this specific {career_name} field , not any other.
                           3. They have contributed significantly to that field and people consider them as great for their Knowledge,Innovation, Dedication to that specific {career_name} field .
                           4. They are not involved in Criminal offences.
                           5. They are not  passive contributors like investors,industrialists, activists. 
+                          
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
-                                            One liner reason only for the  label "WRONG" """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied or you are unable to verify """,
                         agent=famous_personality_reviewer_agent)
-
 
 top_companies_reviewer_task = Task(description=
                         """
@@ -198,22 +160,20 @@ top_companies_reviewer_task = Task(description=
                           1. The companies work directly in the field.
                           2. They have a reputation of working and employing people in that field.
                         """,
-                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied 
-                                            One liner reason only for the  label "WRONG" """,
+                        expected_output=""" Give label "RIGHT" if all names satisfies all grounds , "WRONG" if even one ground is not satisfied or you are unable to verify . Also add the reason""",
                         agent=top_companies_reviewer_agent)
-
 
 master_task = Task(description=
                             """
                                A Content reviewer  has labelled the data after  fact checking.
                                You need to make sure the following grounds
                                1. Even a single "WRONG" label is given to the data from any subordinate , return will be "REJECTED".
-                               2. If all labels given are only "RIGHT" , return will be "ACCEPTED"
-                               3. If you are returning "REJECTED" then also add it's reason from the agent.
+                               2. Only If all labels given are only "RIGHT" , return will be "ACCEPTED"
                             """,
-                          expected_output=""" 
-                          Status: Return your deciscions in a single word only "ACCEPTED" or "REJECTED"
-                          Reason: If the status is "REJECTED", state  the reason  """ ,
+                          expected_output=""" Return your deciscions in a single word only "ACCEPTED" or "REJECTED" based on grounds  and state the  reason as  beacause of which exact field it got rejected
+                          Here is an example 
+                          Status: REJECTED
+                          Reason: Tha famous personality names section , especially "mr.x" is labelled as "WRONG" by an subordinate for not satisfying the ground """ ,
                           agent=master_agent)
 
 
@@ -221,24 +181,18 @@ master_task = Task(description=
 
 crew = Crew(agents=[ description_reviewer_agent,top_colleges_reviewer_agent,famous_personality_reviewer_agent,top_companies_reviewer_agent,master_agent], 
             tasks=[description_reviewer_task,top_colleges_reviewer_task,famous_personality_reviewer_task,top_companies_reviewer_task,master_task], 
-           verbose=True)
+            verbose=False)
+
+inputs={
+  "career_id": "9",
+  "career_name": "Aerospace Engineer",
+  "description": "Aerospace engineers play an important role in the aviation and space industries, designing, producing, and testing aeroplanes, spacecraft, and missiles. They operate in an array of industries, including defence, space research, and commercial aircraft, making aeronautical engineering a vibrant and important discipline.\n\nAerospace engineering spans various specialized fields, including a thorough grasp of aerodynamics, propulsion systems, and material science. Aerodynamics is an understanding of how air reacts with solid matter, which is essential in creating efficient and safe aeroplanes and spacecraft. Propulsion systems are the engines and motors that generate the necessary thrust for these vehicles, and materials science is concerned with selecting and applying materials that can resist harsh circumstances.\n\nAerospace engineering encompasses far more than only the design and creation of new aircraft and spacecraft. Aerospace engineers also work to maintain and enhance current technology, assuring their safety and efficiency. They may work on initiatives such as creating new aviation technology, increasing fuel efficiency, or enhancing aircraft durability.\n\nAn aeronautical engineering career is both exciting and financially lucrative. Aerospace engineering salaries are competitive, reflecting the field's high degree of competence and responsibility. According to numerous industry statistics, aerospace engineers may expect to make a good living, with prospects for advancement as they gain expertise and work on increasingly difficult projects.\n\nSo, is aerospace engineering a good career? The answer is a bold yes. Aerospace engineering provides plenty of opportunities for people interested in innovation, problem-solving, and working with cutting-edge technologies. The demand for experienced aerospace engineers remains high, and their work is crucial to advances in aviation and space exploration.\n\nIn a nutshell, aerospace engineers are critical to the advancement of aviation and space technology. Their knowledge of aerodynamics, propulsion systems, and materials science is critical for developing and enhancing aeroplanes and spacecraft. With a potential aerospace engineering salary and a diverse range of tasks, choosing a career in aerospace engineering is both gratifying and influential.",
+  "top_colleges": "Indian Institute of Technology (IIT)  Bombay,, Indian Institute of Technology (IIT), Madras, Indian Institute of Technology (IIT), Kanpur, Indian Institute of Science (IISc), Bangalore, National Institute of Technology (NIT), Trichy",
+  "famous_personalities_name": "Kalpana Chawla, Dr. Mylswamy Annadurai, G. Madhavan Nair, K. Radhakrishnan, Shreedhar Vembu",
+  "top_companies": "Hindustan Aeronautics Limited (HAL), Indian Space Research Organisation (ISRO), Bharat Electronics Limited (BEL), Tata Advanced Systems, Mahindra Aerospace"
+}
+result = crew.kickoff(inputs=inputs)
 
 
-# inputs={
-#   "career_id": "116",
-#   "career_name": "Architect",
-#   "description": "An Architect is responsible for designing, planning, and overseeing the construction of buildings, homes, and other structures. They work in various sectors, including residential, commercial, and public works. Architects must have a strong understanding of design principles, construction methods, and zoning regulations. They also need to consider aesthetic appeal, functionality, and sustainability when creating designs.",
-#   "top_colleges": "School of Planning and Architecture  Delhi,, Indian Institute of Technology (IIT), Kharagpur, National Institute of Technology (NIT), Tiruchirappalli, Jadavpur University, Kolkata, Indian Institute of Technology (IIT), Roorkee",
-#   "famous_personalities_name": "B.V. Doshi, Charles Correa, Raj Rewal, Hafeez Contractor",
-#   "top_companies": "Hafeez Contractor, Morphogenesis, C.P. Kukreja Associates, Shashi Prabhu & Associates, Raja Aederi Consultants"
-# }
-# result = crew.kickoff(inputs=inputs)
-
-
-# # final output
-# # print(result.raw)          
-# final_result={
-# "id":inputs["career_id"],
-# "status":result.raw      
-# }
-# print(f"The result is {final_result}")
+# final output
+print(result.raw)  
