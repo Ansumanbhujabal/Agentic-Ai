@@ -72,7 +72,7 @@ description_corrector_agent = Agent(role=
   
 responsibilities_corrector_agent=Agent(role=
                           "Senior Content Correcter ",
-                          goal="Validate the content with facts and get the most correct content", 
+                          goal="Get the most correct content", 
                           backstory=
                           """
                           You are a Senior Content Correcter  who has been assigned to correct the content if necessary  
