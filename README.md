@@ -1,6 +1,6 @@
 # Agentic-Ai
-Techstack used till now 
-
+This repo is one of my practice repo for AI Agents skills that I gain day by day.
+It contains sample projects for all frameworks I have learned so far.
 
 ![image](https://github.com/user-attachments/assets/a908b24f-4471-4fe9-a39e-a92fff6baa98)
 ![image](https://github.com/user-attachments/assets/f6dfe5c7-5b6d-4e64-83a7-b51ac0228bf6)
