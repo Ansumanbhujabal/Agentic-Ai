@@ -49,7 +49,3 @@ This course is accessible to everyone, and assumes no prior coding or AI experie
     response=graph.invoke(input)
     print(response)
   
-# Unlock the power of Generative AI! My new course, Generative AI for Everyone, is now available!
-# Learn the basics, apply it in your life & profession, and discover how it will shape the future of work & society.
-# No prior coding or AI experience needed! 
-# #GenerativeAI #AIforAll"\n\nLet me know if this one hits the mark or if you\'d like me to try again!'
