@@ -1,0 +1,167 @@
+{
+  "exam_info": {
+    "id": "gate_2025",
+    "name": "GATE 2025",
+    "short_description": "Graduate Aptitude Test in Engineering (GATE) 2025 conducted by IIT Roorkee.",
+    "tags": [
+      "engineering",
+      "postgraduate",
+      "entrance",
+      "national"
+    ],
+    "target_audience": "Engineering graduates and final year students aspiring for postgraduate programs.",
+    "highlights": {
+      "mode": "Computer-based Test (CBT)",
+      "frequency": "Once a year",
+      "conducting_body": "Indian Institutes of Technology Roorkee",
+      "duration": "3 hours",
+      "medium": [
+        "English"
+      ],
+      "official_website": "https://gate2025.iitr.ac.in/index.html"
+    },
+    "important_dates": {
+      "application_start": "2024-08-24",
+      "application_end": "2024-09-26",
+      "admit_card_release": "TBD",
+      "exam_date": [
+        "2025-02-01",
+        "2025-02-02",
+        "2025-02-15",
+        "2025-02-16"
+      ],
+      "result_date": "TBD",
+      "counseling_start": "TBD"
+    },
+    "eligibility": {
+      "age_limit": {
+        "minimum": null,
+        "maximum": null,
+        "as_of_date": "2025-12-31"
+      },
+      "education": {
+        "required_subjects": [
+          "Engineering",
+          "Technology",
+          "Science",
+          "Architecture",
+          "Humanities"
+        ],
+        "minimum_marks": {
+          "general": "TBD",
+          "obc": "TBD",
+          "sc_st": "TBD"
+        }
+      },
+      "nationality": [
+        "Indian"
+      ],
+      "attempts": "No restriction"
+    },
+    "exam_pattern": {
+      "total_marks": "TBD",
+      "total_questions": "TBD",
+      "question_distribution": {
+        "TBD": {
+          "questions": "TBD",
+          "marks": "TBD"
+        }
+      },
+      "marking_scheme": {
+        "correct_answer": "TBD",
+        "incorrect_answer": "TBD",
+        "unattempted": "TBD"
+      },
+      "type": "Multiple Choice Questions (MCQs)",
+      "duration": "3 hours"
+    },
+    "syllabus": {
+      "Engineering": [
+        "To be updated"
+      ],
+      "Technology": [
+        "To be updated"
+      ],
+      "Science": [
+        "To be updated"
+      ],
+      "Architecture": [
+        "To be updated"
+      ],
+      "Humanities": [
+        "To be updated"
+      ],
+      "syllabus_pdf": "To be updated"
+    },
+    "preparation_resources": {
+      "books": {
+        "Engineering": [
+          "To be updated"
+        ],
+        "Technology": [
+          "To be updated"
+        ],
+        "Science": [
+          "To be updated"
+        ],
+        "Architecture": [
+          "To be updated"
+        ],
+        "Humanities": [
+          "To be updated"
+        ]
+      },
+      "mock_tests": [
+        "To be updated"
+      ],
+      "previous_papers": [
+        "To be updated"
+      ],
+      "video_courses": [
+        "To be updated"
+      ]
+    },
+    "application_process": {
+      "steps": [
+        "To be updated"
+      ],
+      "documents_required": [
+        "To be updated"
+      ],
+      "fees": {
+        "general": "TBD",
+        "obc": "TBD",
+        "sc_st_pwd": "TBD"
+      },
+      "correction_window": {
+        "available": true,
+        "dates": {
+          "start": "TBD",
+          "end": "TBD"
+        },
+        "link": "To be updated"
+      }
+    },
+    "participating_colleges": {
+      "total_colleges": "TBD",
+      "total_seats": "TBD",
+      "top_colleges": [],
+      "counseling_body": "To be updated"
+    },
+    "cutoffs_and_results": {
+      "previous_year_cutoffs": {
+        "general": "TBD",
+        "obc": "TBD",
+        "sc_st": "TBD"
+      },
+      "how_to_check": "To be updated",
+      "score_normalization": "TBD"
+    }
+  },
+  "system_metadata": {
+    "execution_id": "b3bc5bb5-7f6c-4203-bce6-4f66e5cc00fe",
+    "data_sources": [],
+    "processed_at": "2025-04-19T17:25:46.677604",
+    "content_type": "str"
+  }
+}

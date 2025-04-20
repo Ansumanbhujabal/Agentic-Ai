@@ -1,0 +1,180 @@
+{
+  "exam_info": {
+    "id": "icrb_2025",
+    "name": "ICRB 2025",
+    "short_description": "Indian Space Research Organisation (ISRO) Centralized Recruitment (ICRB) Exam for various posts like LDC, UDC, and Steno.",
+    "tags": [
+      "ISRO",
+      "ICRB",
+      "recruitment",
+      "exam",
+      "government"
+    ],
+    "target_audience": "Graduates seeking government jobs in administrative roles.",
+    "highlights": {
+      "mode": "Offline (Pen & Paper)",
+      "frequency": "Once a year",
+      "conducting_body": "Indian Space Research Organisation (ISRO)",
+      "duration": "3 hours",
+      "medium": [
+        "English"
+      ],
+      "official_website": "https://www.isro.gov.in/careers"
+    },
+    "important_dates": {
+      "application_start": "2025-02-01",
+      "application_end": "2025-03-01",
+      "admit_card_release": "2025-04-01",
+      "exam_date": "2025-05-01",
+      "result_date": "2025-06-01",
+      "counseling_start": "2025-07-01"
+    },
+    "eligibility": {
+      "age_limit": {
+        "minimum": 18,
+        "maximum": 35,
+        "as_of_date": "2025-12-31"
+      },
+      "education": {
+        "required_subjects": [],
+        "minimum_marks": {
+          "general": null,
+          "obc": null,
+          "sc_st": null
+        }
+      },
+      "nationality": [
+        "Indian"
+      ],
+      "attempts": "No limit"
+    },
+    "exam_pattern": {
+      "total_marks": 100,
+      "total_questions": 100,
+      "question_distribution": {
+        "General English": {
+          "questions": 25,
+          "marks": 25
+        },
+        "General Knowledge": {
+          "questions": 25,
+          "marks": 25
+        },
+        "Quantitative Aptitude": {
+          "questions": 25,
+          "marks": 25
+        },
+        "Logical Reasoning": {
+          "questions": 25,
+          "marks": 25
+        }
+      },
+      "marking_scheme": {
+        "correct_answer": 1,
+        "incorrect_answer": 0,
+        "unattempted": 0
+      },
+      "type": "Multiple Choice Questions (MCQs)",
+      "duration": "3 hours"
+    },
+    "syllabus": {
+      "General English": [
+        "Reading Comprehension",
+        "Grammar",
+        "Vocabulary"
+      ],
+      "General Knowledge": [
+        "Current Affairs",
+        "History",
+        "Geography",
+        "Science",
+        "Polity"
+      ],
+      "Quantitative Aptitude": [
+        "Arithmetic",
+        "Algebra",
+        "Geometry",
+        "Data Interpretation"
+      ],
+      "Logical Reasoning": [
+        "Verbal Reasoning",
+        "Non-Verbal Reasoning",
+        "Logical Deduction"
+      ],
+      "syllabus_pdf": "https://formwalaa.in/syllabus/icrb-isro-syllabus-2025"
+    },
+    "preparation_resources": {
+      "books": {
+        "General English": [
+          "Wren & Martin",
+          "S.P. Bakshi"
+        ],
+        "General Knowledge": [
+          "Lucent GK",
+          "Arihant GK"
+        ],
+        "Quantitative Aptitude": [
+          "R.S. Aggarwal",
+          "Arihant Quantitative Aptitude"
+        ],
+        "Logical Reasoning": [
+          "R.S. Aggarwal",
+          "Arihant Logical Reasoning"
+        ]
+      },
+      "mock_tests": [
+        "https://www.geeksforgeeks.org/isro-exam-2025/"
+      ],
+      "previous_papers": [
+        "https://www.isro.gov.in/careers"
+      ],
+      "video_courses": [
+        "https://www.youtube.com/"
+      ]
+    },
+    "application_process": {
+      "steps": [
+        "Visit the official ISRO recruitment website",
+        "Register using a valid email and mobile number",
+        "Fill in personal and educational details",
+        "Upload required documents",
+        "Pay the application fee",
+        "Submit and download the confirmation page"
+      ],
+      "documents_required": [
+        "Passport size photograph",
+        "Signature",
+        "ID Proof",
+        "Educational Certificates"
+      ],
+      "fees": {
+        "general": 750,
+        "obc": 750,
+        "sc_st_pwd": 750
+      },
+      "correction_window": {
+        "available": false
+      }
+    },
+    "participating_colleges": {
+      "total_colleges": "Not Applicable",
+      "total_seats": "526",
+      "counseling_body": "Not Applicable"
+    },
+    "cutoffs_and_results": {
+      "previous_year_cutoffs": {
+        "general": null,
+        "obc": null,
+        "sc_st": null
+      },
+      "how_to_check": "Visit the official ISRO website > Login > View Scorecard",
+      "score_normalization": "Raw Score"
+    }
+  },
+  "system_metadata": {
+    "execution_id": "5075b400-84f0-4187-b6b7-43d8bce3df69",
+    "data_sources": [],
+    "processed_at": "2025-04-20T00:20:18.388755",
+    "content_type": "str"
+  }
+}

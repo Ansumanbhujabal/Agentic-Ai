@@ -1,0 +1,226 @@
+{
+  "exam_info": {
+    "exam": {
+      "id": "gate_2025",
+      "name": "GATE 2025",
+      "short_description": "Graduate Aptitude Test in Engineering for admission to postgraduate programs in engineering and science.",
+      "tags": [
+        "engineering",
+        "postgraduate",
+        "entrance",
+        "national"
+      ],
+      "target_audience": "Students with a bachelor's degree in engineering or science or those in their final year of such programs.",
+      "highlights": {
+        "mode": "Computer Based Test (CBT)",
+        "frequency": "Once a year",
+        "conducting_body": "Indian Institute of Technology (IIT)",
+        "medium": [
+          "English"
+        ],
+        "official_website": "https://gate.iitkgp.ac.in/",
+        "duration": "3 hours",
+        "total_questions": 65,
+        "total_marks": 100
+      },
+      "important_dates": {
+        "application_start": "2025-07-01",
+        "application_end": "2025-08-31",
+        "admit_card_release": "2025-01-03",
+        "exam_date": "2025-02-10",
+        "result_date": "2025-03-16",
+        "counseling_start": "2025-04-01"
+      },
+      "eligibility": {
+        "age_limit": {
+          "minimum": 21,
+          "maximum": null,
+          "as_of_date": "2025-07-01"
+        },
+        "education": {
+          "required_subjects": [
+            "Engineering",
+            "Science"
+          ],
+          "minimum_marks": {
+            "general": null,
+            "obc": null,
+            "sc_st": null
+          }
+        },
+        "nationality": [
+          "Indian",
+          "NRIs",
+          "PIOs",
+          "Foreign Nationals"
+        ],
+        "attempts": "No limit"
+      },
+      "exam_pattern": {
+        "total_marks": 100,
+        "total_questions": 65,
+        "question_distribution": {
+          "General Aptitude": {
+            "questions": 10,
+            "marks": 15
+          },
+          "Engineering Mathematics": {
+            "questions": 10,
+            "marks": 15
+          },
+          "Core Subject": {
+            "questions": 45,
+            "marks": 70
+          }
+        },
+        "marking_scheme": {
+          "correct_answer": 1,
+          "incorrect_answer": -0.33,
+          "unattempted": 0
+        },
+        "type": "Multiple Choice Questions (MCQs) and Numerical Answer Type (NAT)",
+        "duration": "3 hours"
+      },
+      "syllabus": {
+        "general_aptitude": [
+          "Verbal Ability",
+          "Numerical Ability"
+        ],
+        "engineering_mathematics": [
+          "Linear Algebra",
+          "Calculus",
+          "Probability"
+        ],
+        "core_subject": {
+          "mechanical_engineering": [
+            "Thermodynamics",
+            "Mechanics"
+          ],
+          "electrical_engineering": [
+            "Circuit Analysis",
+            "Electromagnetism"
+          ]
+        },
+        "syllabus_pdf": "https://gate.iitkgp.ac.in/syllabus-pdf"
+      },
+      "preparation_resources": {
+        "books": {
+          "general_aptitude": [
+            "Verbal and Numerical Ability by SP Jain"
+          ],
+          "engineering_mathematics": [
+            "Engineering Mathematics by BS Grewal"
+          ]
+        },
+        "mock_tests": [
+          "https://gate.iitkgp.ac.in/mock-test"
+        ],
+        "previous_papers": [
+          "https://gate.iitkgp.ac.in/previous-papers"
+        ],
+        "video_courses": [
+          "https://npel.iitkgp.ac.in/"
+        ]
+      },
+      "application_process": {
+        "steps": [
+          "Visit the official GATE website",
+          "Register using email and mobile number",
+          "Fill in personal and academic details",
+          "Upload documents",
+          "Pay the application fee",
+          "Download confirmation page"
+        ],
+        "documents_required": [
+          "Passport size photo",
+          "Signature",
+          "Degree Certificate",
+          "ID Proof"
+        ],
+        "fees": {
+          "general": 2000,
+          "obc": 1800,
+          "sc_st_pwd": 1000
+        },
+        "correction_window": {
+          "available": true,
+          "dates": {
+            "start": "2025-09-05",
+            "end": "2025-09-10"
+          },
+          "link": "https://gate.iitkgp.ac.in/correction-window"
+        }
+      },
+      "scholarships_and_fees": {
+        "application_fee_waivers": [
+          "SC/ST/PwD candidates"
+        ],
+        "related_scholarships": [
+          "MHRD Scholarship",
+          "Institute-specific scholarships"
+        ]
+      },
+      "exam_centers": {
+        "total_centers": 200,
+        "cities": [
+          "Delhi",
+          "Mumbai",
+          "Chennai",
+          "Bangalore",
+          "Hyderabad",
+          "..."
+        ],
+        "center_allocation_rules": "Based on choices filled during registration and availability"
+      },
+      "cutoffs_and_results": {
+        "previous_year_cutoffs": {
+          "general": 40,
+          "obc": 35,
+          "sc_st": 30
+        },
+        "how_to_check": "Visit official website > Login > View Scorecard",
+        "score_normalization": "Percentile based"
+      },
+      "participating_colleges": {
+        "total_colleges": 1000,
+        "total_seats": 25000,
+        "top_colleges": [
+          {
+            "name": "IIT Bombay",
+            "seats": 1000
+          },
+          {
+            "name": "IIT Delhi",
+            "seats": 900
+          }
+        ],
+        "counseling_body": "GATE COAP and CCMT"
+      },
+      "student_reviews_and_faqs": {
+        "reviews": [
+          {
+            "student": "Rahul Sharma",
+            "year": 2024,
+            "review": "Regular practice of previous year papers helped me improve my time management."
+          }
+        ],
+        "faqs": [
+          {
+            "question": "Can I appear for GATE without a degree?",
+            "answer": "No, you must have a bachelor's degree or be in the final year of such a program."
+          },
+          {
+            "question": "Is there any age limit for GATE 2025?",
+            "answer": "There is no upper age limit, but you must be at least 21 years old."
+          }
+        ]
+      }
+    }
+  },
+  "system_metadata": {
+    "execution_id": "fb1f3b0d-62ea-4bd2-9d53-c08f2dc8bdf3",
+    "data_sources": [],
+    "processed_at": "2025-04-19T17:36:49.669130",
+    "content_type": "str"
+  }
+}

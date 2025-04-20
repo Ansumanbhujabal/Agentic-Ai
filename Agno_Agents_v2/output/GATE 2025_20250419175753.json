@@ -1,0 +1,154 @@
+{
+  "exam_info": {
+    "id": "gate_2025",
+    "name": "GATE 2025",
+    "short_description": "National-level exam for comprehensive understanding in various undergraduate-level subjects in Engineering, Technology, Architecture, Science, Commerce, Arts, Humanities.",
+    "tags": [
+      "engineering",
+      "undergraduate",
+      "national",
+      "entrance"
+    ],
+    "target_audience": "Students aiming for higher education in Engineering, Technology, Architecture, Science, Commerce, Arts, Humanities disciplines.",
+    "highlights": {
+      "mode": "Online",
+      "frequency": "Once a year",
+      "conducting_body": "Indian Institute of Technology Roorkee (IITR)",
+      "duration": "3 hours",
+      "medium": [
+        "English"
+      ],
+      "official_website": "https://gate2025.iitr.ac.in/index.html"
+    },
+    "important_dates": {
+      "application_start": "2025-09-01",
+      "application_end": "2025-09-30",
+      "admit_card_release": "2025-01-15",
+      "exam_date": "2025-02-01",
+      "result_date": "2025-03-20",
+      "counseling_start": "2025-04-05"
+    },
+    "eligibility": {
+      "age_limit": {
+        "minimum": null,
+        "maximum": null,
+        "as_of_date": "2025-12-31"
+      },
+      "education": {
+        "required_subjects": [
+          "Varies based on paper selected"
+        ],
+        "minimum_marks": {
+          "general": 50,
+          "obc": 45,
+          "sc_st": 45
+        }
+      },
+      "nationality": [
+        "Indian Nationals",
+        "Foreign Nationals"
+      ],
+      "attempts": "No limit"
+    },
+    "exam_pattern": {
+      "total_marks": 100,
+      "total_questions": 65,
+      "question_distribution": {
+        "Engineering Mathematics": {
+          "questions": 15,
+          "marks": 15
+        },
+        "Technical Subject": {
+          "questions": 70,
+          "marks": 70
+        }
+      },
+      "marking_scheme": {
+        "correct_answer": 1,
+        "incorrect_answer": 0,
+        "unattempted": 0
+      },
+      "type": "Multiple Choice Questions (MCQs)",
+      "duration": "3 hours"
+    },
+    "syllabus": {
+      "Engineering Mathematics": [
+        "Calculus, Differential Equations, Linear Algebra"
+      ],
+      "Technical Subject": [
+        "Varies based on the selected paper"
+      ],
+      "syllabus_pdf": "https://gate2025.iitr.ac.in/exam-papers-and-syllabus.html"
+    },
+    "preparation_resources": {
+      "books": {
+        "Engineering Mathematics": [
+          "Higher Engineering Mathematics by B.S. Grewal",
+          "Advanced Engineering Mathematics by Erwin Kreyszig"
+        ],
+        "Technical Subject": [
+          "Subject-specific textbooks and reference books"
+        ]
+      },
+      "mock_tests": [
+        "https://gate2025.iitr.ac.in/question-papers.html"
+      ],
+      "previous_papers": [
+        "https://gate2025.iitr.ac.in/question-papers.html"
+      ],
+      "video_courses": [
+        "Varies based on paper"
+      ]
+    },
+    "application_process": {
+      "steps": [
+        "Visit the official website and register",
+        "Fill the application form with necessary details",
+        "Upload required documents",
+        "Pay the application fee",
+        "Submit the application form"
+      ],
+      "documents_required": [
+        "Valid ID proof",
+        "Passport size photograph",
+        "Qualifying degree certificate",
+        "Category certificate (if applicable)"
+      ],
+      "fees": {
+        "general": 1500,
+        "obc": 1500,
+        "sc_st": 750
+      },
+      "correction_window": {
+        "available": true,
+        "dates": {
+          "start": "2025-09-20",
+          "end": "2025-09-25"
+        },
+        "link": "https://gate2025.iitr.ac.in/eligibility-criteria.html"
+      }
+    },
+    "participating_colleges": {
+      "total_colleges": 500,
+      "total_seats": 90000,
+      "top_colleges": [
+        {
+          "name": "IITs",
+          "seats": "Varies based on program"
+        }
+      ],
+      "counseling_body": "Joint Seat Allocation Authority (JoSAA)"
+    },
+    "cutoffs_and_results": {
+      "general": 70,
+      "obc": 60,
+      "sc_st": 50
+    }
+  },
+  "system_metadata": {
+    "execution_id": "95795c7c-1712-488b-9a32-c2b35d218173",
+    "data_sources": [],
+    "processed_at": "2025-04-19T17:57:53.990046",
+    "content_type": "str"
+  }
+}

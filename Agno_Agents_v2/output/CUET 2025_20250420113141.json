@@ -1,0 +1,213 @@
+{
+  "exam_info": {
+    "exam": {
+      "id": "cuet_ug_2025",
+      "name": "Common University Entrance Test (CUET) UG 2025",
+      "short_description": "National level entrance examination for undergraduate admissions in central universities across India.",
+      "tags": [
+        "undergraduate",
+        "entrance",
+        "central universities",
+        "national"
+      ],
+      "target_audience": "Students who have completed or are appearing for 12th grade from any recognized board.",
+      "highlights": {
+        "mode": "Computer-Based Test (CBT)",
+        "frequency": "Once a year",
+        "conducting_body": "National Testing Agency (NTA)",
+        "duration": "4 hours 30 minutes (Divided into two slots)",
+        "medium": [
+          "English",
+          "Hindi",
+          "Tamil",
+          "Telugu",
+          "Urdu",
+          "Bengali",
+          "Kannada",
+          "Gujarati",
+          "Marathi",
+          "Assamese",
+          "Odia",
+          "Punjabi",
+          "Malayalam"
+        ],
+        "official_website": "https://cuet.samarth.ac.in/"
+      },
+      "important_dates": {
+        "application_start": "2025-02-10",
+        "application_end": "2025-03-10",
+        "admit_card_release": "2025-04-20",
+        "exam_date": "2025-05-15",
+        "result_date": "2025-06-10",
+        "counseling_start": "2025-06-20"
+      },
+      "eligibility": {
+        "age_limit": {
+          "minimum": 17,
+          "maximum": null,
+          "as_of_date": "2025-12-31"
+        },
+        "education": {
+          "required_subjects": [
+            "Any three subjects as per the university requirements"
+          ],
+          "minimum_marks": {
+            "general": 50,
+            "obc": 45,
+            "sc_st": 40
+          }
+        },
+        "nationality": [
+          "Indian",
+          "NRIs",
+          "PIOs",
+          "Foreign Nationals"
+        ],
+        "attempts": "No limit"
+      },
+      "exam_pattern": {
+        "total_marks": 500,
+        "total_questions": 175,
+        "question_distribution": {
+          "Language (Slot 1)": {
+            "questions": 40,
+            "marks": 40
+          },
+          "Domain-Specific (Slot 1)": {
+            "questions": 40,
+            "marks": 40
+          },
+          "General Test (Slot 2)": {
+            "questions": 75,
+            "marks": 300
+          }
+        },
+        "marking_scheme": {
+          "correct_answer": 5,
+          "incorrect_answer": -1,
+          "unattempted": 0
+        },
+        "type": "Multiple Choice Questions (MCQs)",
+        "duration": "4 hours 30 minutes"
+      },
+      "syllabus": {
+        "Language Competence": [
+          "Reading Comprehension",
+          "Vocabulary",
+          "Grammar"
+        ],
+        "Domain Knowledge": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "History",
+          "Geography",
+          "Political Science",
+          "Economics",
+          "Sociology",
+          "Psychology",
+          "Anthropology",
+          "Sanskrit",
+          "English"
+        ],
+        "General Awareness": [
+          "Current Affairs",
+          "Static General Knowledge",
+          "Quantitative Aptitude",
+          "Logical Reasoning"
+        ],
+        "syllabus_pdf": "https://cuet.samarth.ac.in/syllabus.pdf"
+      },
+      "preparation_resources": {
+        "books": {
+          "General Awareness": [
+            "Lucent GK",
+            "Arihant GK"
+          ],
+          "Quantitative Aptitude": [
+            "RS Aggarwal",
+            "Arihant Quantitative Aptitude"
+          ],
+          "Logical Reasoning": [
+            "RS Aggarwal",
+            "Arihant Logical Reasoning"
+          ]
+        },
+        "mock_tests": [
+          "https://cuet.samarth.ac.in/mock-tests/"
+        ],
+        "previous_papers": [
+          "https://cuet.samarth.ac.in/previous-papers/2024/",
+          "https://cuet.samarth.ac.in/previous-papers/2023/"
+        ],
+        "video_courses": [
+          "https://youtube.com/officialcuet"
+        ]
+      },
+      "application_process": {
+        "steps": [
+          "Visit the official website",
+          "Register using email and mobile number",
+          "Fill in personal and academic details",
+          "Upload documents",
+          "Pay the application fee",
+          "Download confirmation page"
+        ],
+        "documents_required": [
+          "Passport size photo",
+          "Signature",
+          "Class 10 Certificate",
+          "ID Proof"
+        ],
+        "fees": {
+          "general": 650,
+          "obc": 600,
+          "sc_st_pwd": 550
+        },
+        "correction_window": {
+          "available": true,
+          "dates": {
+            "start": "2025-03-15",
+            "end": "2025-03-20"
+          },
+          "link": "https://cuet.samarth.ac.in/correction-window/"
+        }
+      },
+      "participating_colleges": {
+        "total_colleges": 125,
+        "total_seats": 250000,
+        "top_colleges": [
+          {
+            "name": "Delhi University",
+            "seats": 15000
+          },
+          {
+            "name": "Jawaharlal Nehru University",
+            "seats": 5000
+          },
+          {
+            "name": "Banaras Hindu University",
+            "seats": 10000
+          }
+        ],
+        "counseling_body": "National Testing Agency (NTA)"
+      },
+      "cutoffs_and_results": {
+        "previous_year_cutoffs": {
+          "general": 120,
+          "obc": 100,
+          "sc_st": 90
+        },
+        "how_to_check": "Visit official website > Login > View Scorecard",
+        "score_normalization": "Percentile based"
+      }
+    }
+  },
+  "system_metadata": {
+    "execution_id": "054c8cb1-381a-4833-8280-bbb64f417e44",
+    "data_sources": [],
+    "processed_at": "2025-04-20T11:31:41.122500",
+    "content_type": "str"
+  }
+}
