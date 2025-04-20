@@ -1,0 +1,191 @@
+{
+  "exam_info": {
+    "exam": {
+      "id": "gate_2025",
+      "name": "GATE 2025",
+      "short_description": "Graduate Aptitude Test in Engineering for admission to postgraduate programs in engineering and science.",
+      "tags": [
+        "engineering",
+        "postgraduate",
+        "entrance",
+        "national"
+      ],
+      "target_audience": "Students with a bachelor's degree in engineering or science, or those in their final year of such programs.",
+      "highlights": {
+        "mode": "Computer-Based Test (CBT)",
+        "frequency": "Once a year",
+        "conducting_body": "Indian Institute of Technology (IIT) Bombay",
+        "duration": "3 hours",
+        "medium": "English",
+        "official_website": "https://gate.iitb.ac.in/"
+      },
+      "important_dates": {
+        "application_start": "2025-08-01",
+        "application_end": "2025-09-15",
+        "admit_card_release": "2025-01-03",
+        "exam_date": "2025-02-09",
+        "result_date": "2025-03-16",
+        "counseling_start": "2025-04-01"
+      },
+      "eligibility": {
+        "age_limit": {
+          "minimum": 18,
+          "maximum": null,
+          "as_of_date": "2025-07-31"
+        },
+        "education": {
+          "required_subjects": [
+            "Engineering",
+            "Science",
+            "Mathematics"
+          ],
+          "minimum_marks": {
+            "general": null,
+            "obc": null,
+            "sc_st": null
+          }
+        },
+        "nationality": [
+          "Indian",
+          "NRIs"
+        ],
+        "attempts": "No limit"
+      },
+      "exam_pattern": {
+        "total_marks": 100,
+        "total_questions": 65,
+        "question_distribution": {
+          "General Aptitude": {
+            "questions": 10,
+            "marks": 15
+          },
+          "Engineering Mathematics": {
+            "questions": 13,
+            "marks": 15
+          },
+          "Core Subject": {
+            "questions": 30,
+            "marks": 45
+          },
+          "Specialization": {
+            "questions": 15,
+            "marks": 30
+          }
+        },
+        "marking_scheme": {
+          "correct_answer": 1,
+          "incorrect_answer": -0.25,
+          "unattempted": 0
+        },
+        "type": "Multiple Choice Questions (MCQs) and Numerical Answer Type (NAT)",
+        "duration": "3 hours"
+      },
+      "syllabus": {
+        "general_aptitude": [
+          "Verbal Ability",
+          "Numerical Ability"
+        ],
+        "engineering_mathematics": [
+          "Linear Algebra",
+          "Calculus",
+          "Probability"
+        ],
+        "core_subject": [
+          "Electrical Engineering: Circuits, Signals, Systems",
+          "Mechanical Engineering: Mechanics, Thermodynamics",
+          "Civil Engineering: Structures, Geotechnics"
+        ],
+        "specialization": [
+          "Electrical Engineering: Control Systems, Power Systems",
+          "Mechanical Engineering: Design, Manufacturing",
+          "Civil Engineering: Transportation, Water Resources"
+        ],
+        "syllabus_pdf": "https://gate.iitb.ac.in/syllabus.pdf"
+      },
+      "preparation_resources": {
+        "books": {
+          "engineering_mathematics": [
+            "Higher Engineering Mathematics by B.S. Grewal"
+          ],
+          "core_subject": [
+            "Textbooks specific to each discipline"
+          ]
+        },
+        "mock_tests": [
+          "https://gate.iitb.ac.in/mock-test"
+        ],
+        "previous_papers": [
+          "https://gate.iitb.ac.in/question-papers",
+          "https://gate.iitb.ac.in/solutions"
+        ],
+        "video_courses": [
+          "https://www.npTEL.ac.in/",
+          "https://iitb.ac.in/"
+        ]
+      },
+      "application_process": {
+        "steps": [
+          "Visit the official website",
+          "Register using email and mobile number",
+          "Fill in personal and academic details",
+          "Upload documents",
+          "Pay the application fee",
+          "Download confirmation page"
+        ],
+        "documents_required": [
+          "Passport size photo",
+          "Signature",
+          "Degree Certificate",
+          "ID Proof"
+        ],
+        "fees": {
+          "general": 2000,
+          "obc": 2000,
+          "sc_st_pwd": 1000
+        },
+        "correction_window": {
+          "available": true,
+          "dates": {
+            "start": "2025-09-20",
+            "end": "2025-09-25"
+          },
+          "link": "https://gate.iitb.ac.in/application-correction"
+        }
+      },
+      "participating_colleges": {
+        "total_colleges": 1000,
+        "total_seats": 50000,
+        "top_colleges": [
+          {
+            "name": "IIT Bombay",
+            "seats": 1000
+          },
+          {
+            "name": "IIT Delhi",
+            "seats": 900
+          },
+          {
+            "name": "IIT Kanpur",
+            "seats": 800
+          }
+        ],
+        "counseling_body": "COAP (Common Offer Acceptance Portal)"
+      },
+      "cutoffs_and_results": {
+        "previous_year_cutoffs": {
+          "general": 35,
+          "obc": 31.5,
+          "sc_st": 23.25
+        },
+        "how_to_check": "Visit official website > Login > View Scorecard",
+        "score_normalization": "Percentile based"
+      }
+    }
+  },
+  "system_metadata": {
+    "execution_id": "046ded2c-7df5-4808-b58e-9430645078f0",
+    "data_sources": [],
+    "processed_at": "2025-04-19T17:42:09.598203",
+    "content_type": "str"
+  }
+}

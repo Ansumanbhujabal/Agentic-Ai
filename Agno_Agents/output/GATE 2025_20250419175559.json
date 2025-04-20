@@ -1,0 +1,175 @@
+{
+  "exam_info": {
+    "id": "GATE_2025",
+    "name": "Graduate Aptitude Test in Engineering 2025",
+    "short_description": "National level entrance exam for engineering graduates for admission to postgraduate programs in engineering.",
+    "tags": [
+      "engineering",
+      "postgraduate",
+      "entrance",
+      "national"
+    ],
+    "target_audience": "Engineering graduates or final year students seeking admission to postgraduate programs in engineering.",
+    "highlights": {
+      "mode": "Online",
+      "frequency": "Once a year",
+      "conducting_body": "IIT Roorkee",
+      "duration": "3 hours",
+      "medium": [
+        "English"
+      ],
+      "official_website": "https://gate2025.iitr.ac.in/"
+    },
+    "important_dates": {
+      "application_start": "2025-07-01",
+      "application_end": "2025-09-20",
+      "admit_card_release": "2025-12-01",
+      "exam_date": "2025-02-01",
+      "result_date": "2025-03-20",
+      "counseling_start": "2025-04-15"
+    },
+    "eligibility": {
+      "age_limit": {
+        "minimum": null,
+        "maximum": null,
+        "as_of_date": "2025-12-31"
+      },
+      "education": {
+        "required_subjects": [
+          "Engineering/Technology/Architecture/Science/Commerce/Arts/Humanities"
+        ],
+        "minimum_marks": {
+          "general": 50,
+          "obc": 45,
+          "sc_st": 45
+        }
+      },
+      "nationality": [
+        "Indian"
+      ],
+      "attempts": "Not specified"
+    },
+    "exam_pattern": {
+      "total_marks": 100,
+      "total_questions": 65,
+      "question_distribution": {
+        "General Aptitude": {
+          "questions": 15,
+          "marks": 15
+        },
+        "Engineering Mathematics": {
+          "questions": 10,
+          "marks": 10
+        },
+        "Subject Specific": {
+          "questions": 40,
+          "marks": 75
+        }
+      },
+      "marking_scheme": {
+        "correct_answer": 1,
+        "incorrect_answer": 0,
+        "unattempted": 0
+      },
+      "type": "Multiple Choice Questions and Numerical Answer Type",
+      "duration": "3 hours"
+    },
+    "syllabus": {
+      "General Aptitude": [
+        "Verbal Ability",
+        "Numerical Ability",
+        "Reasoning"
+      ],
+      "Engineering Mathematics": [
+        "Linear Algebra",
+        "Calculus",
+        "Differential equations"
+      ],
+      "Subject Specific": [
+        "Based on chosen engineering discipline"
+      ],
+      "syllabus_pdf": "https://gate2025.iitr.ac.in/syllabus.html"
+    },
+    "preparation_resources": {
+      "books": {
+        "General Aptitude": [
+          "Previous Year Papers",
+          "High School English Grammar and Composition"
+        ],
+        "Engineering Mathematics": [
+          "Higher Engineering Mathematics by B.S. Grewal",
+          "Advanced Engineering Mathematics by Erwin Kreyszig"
+        ],
+        "Subject Specific": [
+          "Standard textbooks based on the chosen discipline"
+        ]
+      },
+      "mock_tests": [
+        "https://gate2025.iitr.ac.in/mock-tests.html"
+      ],
+      "previous_papers": [
+        "https://gate2025.iitr.ac.in/previous-papers.html"
+      ],
+      "video_courses": [
+        "https://gate2025.iitr.ac.in/video-courses.html"
+      ]
+    },
+    "application_process": {
+      "steps": [
+        "Create an account on the official website",
+        "Fill in personal and educational details",
+        "Upload required documents",
+        "Pay the application fee",
+        "Submit the application form"
+      ],
+      "documents_required": [
+        "Passport size photograph",
+        "Scanned signature",
+        "Category/Disability Certificate (if applicable)"
+      ],
+      "fees": {
+        "general": 1500,
+        "obc": 1500,
+        "sc_st": 750
+      },
+      "correction_window": {
+        "available": true,
+        "dates": {
+          "start": "2025-09-21",
+          "end": "2025-09-25"
+        },
+        "link": "https://gate2025.iitr.ac.in/correction-window.html"
+      }
+    },
+    "participating_colleges": {
+      "total_colleges": 1000,
+      "total_seats": 50000,
+      "top_colleges": [
+        {
+          "name": "IIT Bombay",
+          "seats": 1000
+        },
+        {
+          "name": "IIT Delhi",
+          "seats": 900
+        }
+      ],
+      "counseling_body": "Centralized Counseling for M.Tech Admissions (CCMT)"
+    },
+    "cutoffs_and_results": {
+      "previous_year_cutoffs": {
+        "general": 30,
+        "obc": 27,
+        "sc_st": 25
+      },
+      "how_to_check": "Visit the official website and access the result portal",
+      "score_normalization": "Percentile based"
+    }
+  },
+  "system_metadata": {
+    "execution_id": "f9d32e17-b43c-48f3-ad11-7b910172c220",
+    "data_sources": [],
+    "processed_at": "2025-04-19T17:55:59.513402",
+    "content_type": "str"
+  }
+}
